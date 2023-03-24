@@ -4,7 +4,9 @@
   background-color: #ebeeef;
   border-radius: 4px;
 }
-
+.postParentDiv{
+  padding: 4%;
+}
 .heading {
   display: flex;
   justify-content: space-between;
@@ -23,6 +25,7 @@
 
 .recommendations .cards {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .moreView .cards {
@@ -32,6 +35,9 @@
 }
 
 .card {
+  width: 20%;
+  margin-right: 2%;
+  margin-bottom: 2%;
   margin-right: 15px;
   padding: 13px;
   max-width: 222px;
@@ -84,4 +90,8 @@
 .recommendations .heading span {
   font-size: 24px;
   color: #002f34;
+}
+
+.card:last-child {
+  margin-right: 0;
 }

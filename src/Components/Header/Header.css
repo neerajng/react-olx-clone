@@ -12,7 +12,9 @@
   justify-content: space-between;
   align-items: center;
 }
-
+.brandName{
+  cursor: pointer;
+}
 .placeSearch {
   width: 16em;
   height: 48px;
@@ -82,6 +84,7 @@
   height: 48px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .language span {
@@ -105,15 +108,19 @@
   font-weight: bolder;
   margin-right: 5px;
 }
-
+.logToggle{
+  cursor: pointer; 
+}
 .loginPage hr {
   margin: 0;
   background-color: black;
   height: 2px;
+  cursor: pointer;
 }
 
-.loginPage a{
+.loginPage span{
   text-decoration: none;
+  cursor: pointer;
 }
 
 .sellMenu {

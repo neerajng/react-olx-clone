@@ -33,6 +33,8 @@
   .signupParentDiv a {
     display: flex;
     justify-content: center;
+    text-decoration: none;
     cursor: pointer;
+    color: inherit;
   }
   

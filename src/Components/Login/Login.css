@@ -32,7 +32,10 @@
   
   .loginParentDiv a {
     display: flex;
+    text-decoration: none;
     justify-content: center;
     cursor: pointer;
+    color: inherit;
   }
+  
   
