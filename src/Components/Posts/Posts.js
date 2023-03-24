@@ -7,20 +7,24 @@ import { useHistory } from 'react-router-dom';
 import './Post.css';
 
 function Posts() {
-const{firebase} = useContext(FirebaseContext)
+const{firebase} =  useContext(FirebaseContext)
 const [products, setProducts] = useState([])
 const {setPostDetails} = useContext(PostContext)
 const history = useHistory()
-useEffect(()=>{
+
+useEffect(() => {
     firebase.firestore().collection('products').get().then((snapshot)=>{
-      const allPost = snapshot.docs.map((product)=>{
+       const allPost = snapshot.docs.map((product)=>{
         return{
           ...product.data(),
           id: product.id
         }
-      })
+      }) 
       setProducts(allPost)
+      console.log(allPost)    
     })
+    
+    
 },[])
 
 return (
@@ -30,7 +34,7 @@ return (
         <span>Fresh recommendations</span>
       </div>
       <div className="cards">
-        {products.map((product) => {
+        {products?.map((product) => {
           return (
             <div
               className="card"
